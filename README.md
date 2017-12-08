@@ -44,6 +44,7 @@ $ npm install @brickify/m-pl
 ## Options
 
 * @param {RegExp} sanitizer - RegExp applied at first.
+* @param {string} sanitizeBy - sanitized by string.
 * @param {function} callBack - Final callBack to be applied on the end result.
 
 ## Usage
@@ -58,6 +59,7 @@ function lineParser(result, previousLine, line, nextLine) {
 
 parse(content, lineParser, 0, {
     sanitizer: /\n{2,}/,
+    sanitizeBy: '',
     callBack: function (result) {
       return result / 2;
     }
