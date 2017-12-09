@@ -37,8 +37,9 @@ $ npm install @brickify/m-pl
 ## Parser Parameters
 
 * @param {Any} result - Previous returned result.
-* @param {string|undefined} previousLine - Previous line.
+* @param {number} lineNumber - line number.
 * @param {string} line - Current line.
+* @param {string|undefined} previousLine - Previous line.
 * @param {string|undefined} nextLine - Next line.
 
 ## Options
@@ -51,7 +52,7 @@ $ npm install @brickify/m-pl
 var parse = require('@brickify/m-pl');
 var content = '\n\n\n\n1\n2\n3\n4';
 
-function lineParser(result, previousLine, line, nextLine) {
+function lineParser(result, lineNumber, line, previousLine, nextLine) {
   return result + parseInt(line);
 }
 
