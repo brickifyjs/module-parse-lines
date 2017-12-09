@@ -5,7 +5,7 @@ var parse = require('../lib');
 
 o.spec('API', function () {
   o('parse with options', function () {
-    var content = '\n\n\n\n1\n2\n3\n4';
+    var content = '1\n2\n3\n4';
 
     function lineParser(result, lineNumber, line, previousLine, nextLine) {
       return result + parseInt(line);
