@@ -50,7 +50,7 @@ $ npm install @brickify/m-pl
 
 ```js
 var parse = require('@brickify/m-pl');
-var content = '\n\n\n\n1\n2\n3\n4';
+var content = '1\n2\n3\n4';
 
 function lineParser(result, lineNumber, line, previousLine, nextLine) {
   return result + parseInt(line);
