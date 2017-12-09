@@ -32,7 +32,7 @@ $ npm install @brickify/m-pl
 * @param {string} content - Content to be parsed.
 * @param {function} parser - Your line parser logic. (result, previousLine, line, nextLine)
 * @param {Any} result - The first result that is passed on every line call.
-* @param {Object} opts - Optional parameters. (sanitizer, opts)
+* @param {Object} opts - Optional parameters. (opts)
 
 ## Parser Parameters
 
@@ -43,7 +43,6 @@ $ npm install @brickify/m-pl
 
 ## Options
 
-* @param {RegExp} sanitizer - RegExp applied at first.
 * @param {function} callBack - Final callBack to be applied on the end result.
 
 ## Usage
@@ -57,7 +56,6 @@ function lineParser(result, previousLine, line, nextLine) {
 }
 
 parse(content, lineParser, 0, {
-    sanitizer: /\n{2,}/,
     callBack: function (result) {
       return result / 2;
     }

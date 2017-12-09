@@ -12,8 +12,6 @@ o.spec('API', function () {
     }
 
     var result = parse(content, lineParser, 0, {
-      sanitizer: /\n{2,}/,
-      sanitizeBy: '',
       callBack: function (result) {
         return result / 2;
       }
